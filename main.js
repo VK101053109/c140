@@ -26,17 +26,19 @@ function setup(){
 	canvas.parent("canvas");
   video=createCapture(VIDEO);
   video.size(700,600);
-  video.hide
+  video.hide();
   posnet= ml5.poseNet(video,modelready);
 }
 function modelready(){
   console.log("model is working!!!!!!!!!!!!!!!!!!");
-  posenet.on("pose",gotr);
+  posnet.on("pose",gotr);
 }
 
-function draw(){
 
+function draw(){
  background(0); 
+
+image(video,0,0,700,600);
 
  fill("black");
  stroke("black");
